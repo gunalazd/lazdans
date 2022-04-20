@@ -2,3 +2,18 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+h3 {
+  font-size: 40px;
+  color: lightblue;
+  padding: 15px;
+  padding-left: 35px;
+}
+
+
+.content-container {
+  height: 600px;
+  background-color: black;
+  margin: 50px auto;
+  max-width: 700px;
+}

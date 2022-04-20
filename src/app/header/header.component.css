@@ -1,0 +1,20 @@
+.header-wrapper {
+
+}
+
+.header-wrapper .top {
+  height: 14em;
+  background-color: cornflowerblue;
+}
+
+.circle-center {
+  top: 10em;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color:white;
+  border-radius: 100px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.1);
+  margin: auto;
+}
