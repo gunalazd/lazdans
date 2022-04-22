@@ -1,18 +1,12 @@
 import { Component } from '@angular/core';
-import { FlatTreeControl } from '@angular/cdk/tree';
-import {
-  MatTreeFlatDataSource,
-  MatTreeFlattener,
-} from '@angular/material/tree';
 
-interface FoodNode {
-  name: string;
-  children?: FoodNode[];
-}
-
-const TREE_DATA: FoodNode[] = [
+const EXP = [
   {
     name: 'Software Engineer',
+    place: 'The Workshop - Inventors of Play',
+    industry: 'Online Gambling',
+    date: '[Sep 2020 – Nov 2021]',
+    time: 'Spain (Malaga)',
     children: [
       { name: 'Front-End development with Angular and Typescript' },
       { name: 'Delivering changes to production using Bamboo CI/CD pipelines' },
@@ -22,6 +16,10 @@ const TREE_DATA: FoodNode[] = [
   },
   {
     name: 'QA Engineer',
+    place: 'The Workshop - Inventors of Play',
+    industry: 'Online Gambling',
+    date: '[Jun 2018 – Sep 2020]',
+    time: 'Spain (Malaga)',
     children: [
       { name: 'Test Automation using Selenium Web driver and Cypress.io' },
       { name: 'Test planning for new features' },
@@ -29,6 +27,10 @@ const TREE_DATA: FoodNode[] = [
   },
   {
     name: 'Software Test Specialist',
+    place: 'TELE2 SHARED SERVICE CENTRE',
+    industry: 'Telecommunication',
+    date: '[Oct 2015 – Jan 2018]',
+    time: 'Latvia (Riga)',
     children: [
       {
         name: 'Use agile methodology on a daily basis within a team located in different geographic locations (Netherlands, Latvia and India).',
@@ -49,6 +51,10 @@ const TREE_DATA: FoodNode[] = [
   },
   {
     name: 'Software Test specialist',
+    place: 'SOAAR',
+    industry: 'Software development',
+    date: '[Sep 2013 – Oct 2015]',
+    time: 'Latvia (Riga)',
     children: [
       { name: 'Software testing' },
       { name: 'Solution/Services testing' },
@@ -59,6 +65,10 @@ const TREE_DATA: FoodNode[] = [
   },
   {
     name: 'IT Specialist',
+    place: 'Riga Business School',
+    industry: 'Education',
+    date: '[Jan 2012 – Aug 2013]',
+    time: 'Latvia (Riga)',
     children: [
       { name: 'IT equipment repair ' },
       { name: 'IT / office equipment maintenance ' },
@@ -70,43 +80,14 @@ const TREE_DATA: FoodNode[] = [
   },
 ];
 
-interface ExampleFlatNode {
-  expandable: boolean;
-  name: string;
-  level: number;
-}
-
 @Component({
   selector: 'app-work-exp',
   templateUrl: './work-exp.component.html',
   styleUrls: ['./work-exp.component.css'],
 })
 export class WorkExpComponent {
-  private _transformer = (node: FoodNode, level: number) => {
-    return {
-      expandable: !!node.children && node.children.length > 0,
-      name: node.name,
-      level: level,
-    };
-  };
+  constructor() {}
 
-  treeControl = new FlatTreeControl<ExampleFlatNode>(
-    (node) => node.level,
-    (node) => node.expandable
-  );
-
-  treeFlattener = new MatTreeFlattener(
-    this._transformer,
-    (node) => node.level,
-    (node) => node.expandable,
-    (node) => node.children
-  );
-
-  dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
-
-  constructor() {
-    this.dataSource.data = TREE_DATA;
-  }
-
-  hasChild = (_: number, node: ExampleFlatNode) => node.expandable;
+  experiances = EXP;
+  status: boolean = false;
 }

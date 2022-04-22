@@ -8,12 +8,41 @@ h3 {
   color: lightblue;
   padding: 15px;
   padding-left: 35px;
+  text-align: center;
 }
 
 
 .content-container {
-  height: 600px;
-  background-color: black;
+  color: white;
+  min-height: 150px;
+  /* background-color: #061325; */
   margin: 50px auto;
-  max-width: 700px;
+  max-width: 900px;
+}
+
+span.mat-content {
+  flex-direction: column;
+}
+
+mat-expansion-panel {
+  padding-bottom: 10px;
+}
+
+.mat-expansion-panel-header {
+  flex-direction: row !important;
+}
+
+.mat-expansion-panel-body {
+  padding: 10px 24px 0 !important;
+  background-color: #0a192f;
+}
+
+.mat-expansion-panel-header:hover{
+  background-color: rgba(52, 179, 158, 0.068);
+  color: antiquewhite;
+
+}
+
+.mat-expansion-panel-body p {
+  margin-bottom: 5px;
 }

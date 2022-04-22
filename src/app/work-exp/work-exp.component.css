@@ -1,3 +1,21 @@
 mat-tree {
   padding: 15px;
 }
+
+.j-hide {
+  display: none;
+}
+
+mat-expansion-panel .mat-expanded{
+  background-color: #0c1f3b;
+}
+
+
+/* mat-expansion-panel div {
+  color: red;
+  background-color: #1b3b6b !important;
+}
+ */
+
+
+

@@ -12,7 +12,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { HeaderComponent } from './header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { IntroComponent } from './intro/intro.component';
 import { AboutMeComponent } from './about-me/about-me.component';
@@ -21,17 +20,21 @@ import { ContactComponent } from './contact/contact.component';
 import { HelloComponent } from './hello/hello.component';
 import { HoverMasterDirective } from './hover-master.directive';
 import { MatTreeModule } from '@angular/material/tree';
+import { ExpandJobDirective } from './expand-job.directive';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { EducationComponent } from './education/education.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     IntroComponent,
     AboutMeComponent,
     WorkExpComponent,
     ContactComponent,
     HelloComponent,
     HoverMasterDirective,
+    ExpandJobDirective,
+    EducationComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +50,7 @@ import { MatTreeModule } from '@angular/material/tree';
     MatListModule,
     NgbModule,
     MatTreeModule,
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,26 @@
+<div class="content-container" style="padding-left: 25px; padding-right: 25px">
+  <h3 hover-class="tracking-in-contract">
+    Education, Courses and Certificates
+  </h3>
+
+  <div style="display: flex; justify-content: center; flex-direction: column">
+    <div
+      class="ed-name"
+      *ngFor="let education of this.educations"
+      style="padding: 0 25px 25px 25px; width: 520px"
+    >
+      <div
+        class="ed-wrapper"
+        style="
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        "
+      >
+        <div class="name">{{ education.name }}</div>
+        <div class="ed-year">{{ education.year }}</div>
+      </div>
+      <div class="ed-type">{{ education.subtype }}</div>
+    </div>
+  </div>
+</div>

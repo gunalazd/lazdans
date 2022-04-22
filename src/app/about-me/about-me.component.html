@@ -1,3 +1,13 @@
-<div class="content-container">
-<h3>about-me works!</h3>
+<div class="content-container" style="padding-left: 25px; padding-right: 25px">
+  <h3 hover-class="tracking-in-contract">About me</h3>
+
+  <div class="me-wrapper" style="padding: 25px">
+    <div
+      class="ed-name"
+      *ngFor="let about of this.aboutMe"
+      style="margin: 25px"
+    >
+      <div class="ed-type">- {{ about.text }}</div>
+    </div>
+  </div>
 </div>

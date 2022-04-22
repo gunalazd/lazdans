@@ -3,16 +3,17 @@
     <p class="nav-item" (click)="onClick('intro')">INTRO</p>
     <p class="nav-item" (click)="onClick('about')">ABOUT</p>
     <p class="nav-item" (click)="onClick('work')">WORK</p>
+    <p class="nav-item" (click)="onClick('edd')">EDUCATION</p>
     <p class="nav-item" (click)="onClick('contact')">CONTACT</p>
-    <p class="nav-item">Resume</p>
   </div>
 
   <div class="wrapper">
     <app-hello></app-hello>
-    <app-intro class="intro" id="intro"></app-intro>
-    <app-about-me class="about" id="about"></app-about-me>
-    <app-work-exp class="work" id="work"></app-work-exp>
-    <app-contact class="contact" id="contact"></app-contact>
+    <app-intro id="intro"></app-intro>
+    <app-about-me id="about"></app-about-me>
+    <app-work-exp id="work"></app-work-exp>
+    <app-education id="edd"></app-education>
+    <app-contact id="contact"></app-contact>
   </div>
 
   <div class="to-top" id="to-top" (click)="toTop()"></div>
