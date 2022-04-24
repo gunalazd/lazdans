@@ -1,0 +1,81 @@
+.ed-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.pic-weapper img {
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
+  border: 5px solid #fba92c;
+  background-color: #fba92c;
+}
+
+.overlay {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  opacity: 0;
+  border-radius: 150px;
+  transition: 0.5s ease;
+  background-color: rgba(251, 169, 44, 0.25);
+}
+
+div.pic-weapper:hover div.overlay {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 700px) {
+  .pic-weapper {
+    display: none;
+  }
+}
+
+.ed-item {
+  padding: 0 25px 25px 25px;
+  max-width: 620px;
+}
+
+.ed-main-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ed-item-name {
+  font-size: 20px;
+  background-color: #494949;
+  width: fit-content;
+}
+
+.ed-item-year {
+  display: inline;
+  background-color: #494949;
+  width: fit-content;
+}
+
+.ed-item-type {
+  position: relative;
+  color: #fba92c;
+  text-decoration: none;
+  display: inline;
+  background-color: #494949;
+  width: fit-content;
+}
+
+.ed-item-type::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(250, 250, 250);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.ed-item-type:hover::before {
+  transform: scaleX(1);
+}

@@ -1,26 +1,19 @@
-<div class="content-container" style="padding-left: 25px; padding-right: 25px">
-  <h3 hover-class="tracking-in-contract">
-    Education, Courses and Certificates
-  </h3>
+<h3>Education, Courses and Certificates</h3>
 
-  <div style="display: flex; justify-content: center; flex-direction: column">
-    <div
-      class="ed-name"
-      *ngFor="let education of this.educations"
-      style="padding: 0 25px 25px 25px; width: 520px"
-    >
-      <div
-        class="ed-wrapper"
-        style="
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-        "
-      >
-        <div class="name">{{ education.name }}</div>
-        <div class="ed-year">{{ education.year }}</div>
-      </div>
-      <div class="ed-type">{{ education.subtype }}</div>
+<div class="ed-main-wrapper">
+  <div class="ed-wrapper">
+    <div class="ed-item" *ngFor="let education of this.educations">
+      <div class="ed-item-name">{{ education.name }}</div>
+      <div class="ed-item-year">{{ education.year }} -</div>
+      <a class="ed-item-type" [attr.href]="education.ref" target="_blank">
+        {{ education.subtype }}
+      </a>
     </div>
   </div>
+  <div class="pic-weapper">
+    <div class="overlay"></div>
+    <img src="assets/ed-2.png" alt="Education" />
+  </div>
 </div>
+
+<!-- ADD IMAGE ON THE RIGHT SIDE TO ADJUST SPACE PROBLEMS -->

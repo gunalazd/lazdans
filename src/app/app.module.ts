@@ -17,7 +17,6 @@ import { IntroComponent } from './intro/intro.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { WorkExpComponent } from './work-exp/work-exp.component';
 import { ContactComponent } from './contact/contact.component';
-import { HelloComponent } from './hello/hello.component';
 import { HoverMasterDirective } from './hover-master.directive';
 import { MatTreeModule } from '@angular/material/tree';
 import { ExpandJobDirective } from './expand-job.directive';
@@ -31,7 +30,6 @@ import { EducationComponent } from './education/education.component';
     AboutMeComponent,
     WorkExpComponent,
     ContactComponent,
-    HelloComponent,
     HoverMasterDirective,
     ExpandJobDirective,
     EducationComponent,

@@ -1,20 +1,41 @@
 <main>
   <div class="nav-container" id="nav-container">
-    <p class="nav-item" (click)="onClick('intro')">INTRO</p>
-    <p class="nav-item" (click)="onClick('about')">ABOUT</p>
-    <p class="nav-item" (click)="onClick('work')">WORK</p>
-    <p class="nav-item" (click)="onClick('edd')">EDUCATION</p>
-    <p class="nav-item" (click)="onClick('contact')">CONTACT</p>
+    <p class="nav-item" (click)="scrollToElement(intro)">INTRO</p>
+    <p class="nav-item" (click)="scrollToElement(about)">ABOUT</p>
+    <p class="nav-item" (click)="scrollToElement(work)">WORK</p>
+    <p class="nav-item" (click)="scrollToElement(edd)">EDUCATION</p>
+    <p class="nav-item" (click)="scrollToElement(contact)">CONTACT</p>
+    <button type="button" class="btn btn-warning btn-resume">Resume</button>
+    <a
+      href="https://www.linkedin.com/in/%E2%9A%A1-gunars-lazdans-%E2%9A%A1-346443155/"
+      target="_blank"
+    >
+      <img
+        src="assets/linkedin-white.png"
+        width="38"
+        height="38"
+        style="margin-left: 15px; border-radius: 0.25rem"
+        alt="Me"
+      />
+    </a>
   </div>
 
   <div class="wrapper">
-    <app-hello></app-hello>
-    <app-intro id="intro"></app-intro>
-    <app-about-me id="about"></app-about-me>
-    <app-work-exp id="work"></app-work-exp>
-    <app-education id="edd"></app-education>
-    <app-contact id="contact"></app-contact>
+    <div class="content-container" #intro>
+      <app-intro></app-intro>
+    </div>
+    <div class="content-container" #about>
+      <app-about-me></app-about-me>
+    </div>
+    <div class="content-container" #work>
+      <app-work-exp></app-work-exp>
+    </div>
+    <div class="content-container" #edd>
+      <app-education></app-education>
+    </div>
+    <div class="content-container" #contact>
+      <app-contact></app-contact>
+    </div>
   </div>
-
   <div class="to-top" id="to-top" (click)="toTop()"></div>
 </main>

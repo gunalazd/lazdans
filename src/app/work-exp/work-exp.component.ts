@@ -6,7 +6,8 @@ const EXP = [
     place: 'The Workshop - Inventors of Play',
     industry: 'Online Gambling',
     date: '[Sep 2020 – Nov 2021]',
-    time: 'Spain (Malaga)',
+    location: 'Spain',
+    ref: 'https://theworkshop.com/',
     children: [
       { name: 'Front-End development with Angular and Typescript' },
       { name: 'Delivering changes to production using Bamboo CI/CD pipelines' },
@@ -19,7 +20,8 @@ const EXP = [
     place: 'The Workshop - Inventors of Play',
     industry: 'Online Gambling',
     date: '[Jun 2018 – Sep 2020]',
-    time: 'Spain (Malaga)',
+    location: 'Spain',
+    ref: 'https://theworkshop.com/',
     children: [
       { name: 'Test Automation using Selenium Web driver and Cypress.io' },
       { name: 'Test planning for new features' },
@@ -27,10 +29,11 @@ const EXP = [
   },
   {
     name: 'Software Test Specialist',
-    place: 'TELE2 SHARED SERVICE CENTRE',
-    industry: 'Telecommunication',
+    place: 'Tele2 Shared Service Center',
+    industry: 'Telecommunications',
     date: '[Oct 2015 – Jan 2018]',
-    time: 'Latvia (Riga)',
+    location: 'Latvia',
+    ref: 'https://www.tele2.lv/',
     children: [
       {
         name: 'Use agile methodology on a daily basis within a team located in different geographic locations (Netherlands, Latvia and India).',
@@ -52,9 +55,10 @@ const EXP = [
   {
     name: 'Software Test specialist',
     place: 'SOAAR',
-    industry: 'Software development',
+    industry: 'Comercial Software development',
     date: '[Sep 2013 – Oct 2015]',
-    time: 'Latvia (Riga)',
+    location: 'Latvia',
+    ref: 'https://soaar.lv/',
     children: [
       { name: 'Software testing' },
       { name: 'Solution/Services testing' },
@@ -68,7 +72,8 @@ const EXP = [
     place: 'Riga Business School',
     industry: 'Education',
     date: '[Jan 2012 – Aug 2013]',
-    time: 'Latvia (Riga)',
+    location: 'Latvia',
+    ref: 'https://www.rbs.lv/',
     children: [
       { name: 'IT equipment repair ' },
       { name: 'IT / office equipment maintenance ' },

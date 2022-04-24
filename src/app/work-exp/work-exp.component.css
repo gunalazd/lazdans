@@ -1,21 +1,111 @@
-mat-tree {
-  padding: 15px;
+/* Color of Selection Header once open */
+mat-expansion-panel .mat-expanded {
+  background-color: #fba92c;
 }
 
-.j-hide {
-  display: none;
+.header-main {
+  display: flex;
 }
 
-mat-expansion-panel .mat-expanded{
-  background-color: #0c1f3b;
+/* Adjust Job Title */
+.header-title {
+  font-size: 25px;
+  padding-bottom: 5px;
 }
 
-
-/* mat-expansion-panel div {
-  color: red;
-  background-color: #1b3b6b !important;
+.header-dates {
+  justify-content: right;
+  white-space: nowrap;
 }
- */
 
+.header-industry {
+  color: #fba92c;
+  padding-left: 5px;
+}
 
+.mat-expansion-panel-header:hover .header-industry,
+.mat-expansion-panel-header.mat-expanded .header-industry,
+.mat-expansion-panel-header.mat-expanded:hover .header-industry {
+  color: white;
+}
 
+mat-expansion-panel-header {
+  padding-bottom: 5px;
+  margin-top: 10px;
+  border: #504f4f 2px solid;
+  background-color: #494949b2;
+}
+
+.mat-expansion-panel-header:hover {
+  background-color: #fba92c;
+  color: white;
+  /* border: #fba92c 2px solid; */
+  border-radius: 5px;
+}
+
+.mat-expansion-panel-header.mat-expanded:hover {
+  background-color: #fba92c;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.mat-expansion-panel-header.mat-expanded {
+  /* border: #fba92c 2px solid; */
+  border-radius: 5px;
+}
+
+.job-descr {
+  margin: 15px 0;
+  background-color: #494949;
+  width: fit-content;
+}
+
+.mat-expansion-panel-spacing {
+  margin: 0;
+}
+
+.place-industry {
+  flex-direction: row;
+  display: flex;
+}
+
+@media only screen and (max-width: 700px) {
+  .place-industry {
+    flex-direction: column;
+  }
+  .mat-expansion-panel-header {
+    padding: 0 15px;
+  }
+}
+/*
+.place-title {
+  position: relative;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  width: fit-content;
+}
+
+.place-title:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.place-title::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(250, 250, 250);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.place-title:hover::before {
+  transform: scaleX(1);
+} */
+
+.mat-expansion-panel-header-description {
+  margin: 0;
+}

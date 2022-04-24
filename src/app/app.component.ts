@@ -1,10 +1,4 @@
-import {
-  Component,
-  ElementRef,
-  Inject,
-  OnInit,
-  ViewChild,
-} from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { DOCUMENT, ViewportScroller } from '@angular/common';
 
 @Component({
@@ -17,8 +11,12 @@ export class AppComponent implements OnInit {
 
   @ViewChild('myDiv') navbar: ElementRef | undefined;
 
-  public onClick(elementId: string): void {
-    this.viewportScroller.scrollToAnchor(elementId);
+  scrollToElement($element: HTMLDivElement): void {
+    console.log($element);
+    $element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+    });
   }
 
   ngOnInit(): void {
@@ -29,22 +27,33 @@ export class AppComponent implements OnInit {
       var currentScrollPos = window.pageYOffset;
       if (element) {
         if (currentScrollPos > 100) {
-          element.style.boxShadow = '2px 5px 20px #000000';
+          element.style.boxShadow = '0px 10px 13px -7px #000000';
           elementToTop?.classList.add('show-scrollTop');
         } else {
           element.style.boxShadow = '';
           elementToTop?.classList.remove('show-scrollTop');
         }
       }
+
       if (prevScrollpos > currentScrollPos) {
         if (element) {
           element.style.top = '0';
-          // element.style.boxShadow = '2px 5px 20px #000000';
+          element.style.boxShadow = '0px 10px 13px -7px #000000';
         }
       } else {
         if (element) {
           element.style.top = '-70px';
           element.style.boxShadow = '';
+        }
+      }
+      if (currentScrollPos < 40) {
+        if (element) {
+          element.style.boxShadow = '';
+          element.style.backgroundColor = 'transparent';
+        }
+      } else {
+        if (element) {
+          element.style.backgroundColor = 'rgba(73, 73, 73, 0.85)';
         }
       }
       prevScrollpos = currentScrollPos;

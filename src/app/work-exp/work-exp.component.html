@@ -1,28 +1,26 @@
-<div class="content-container" style="padding: 25px">
-  <h3>Work Experiance</h3>
-  <mat-accordion>
-    <mat-expansion-panel
-      hideToggle
-      *ngFor="let job of this.experiances; let i = index"
-    >
-      <mat-expansion-panel-header style="flex-direction: column">
-        <div style="flex-direction: row; display: flex">
-          <mat-panel-title style="font-size: 25px; padding-bottom: 5px">
-            {{ job.name }}
-          </mat-panel-title>
-          <mat-panel-description style="justify-content: right">
-            <span>{{ job.date }}</span>
-          </mat-panel-description>
-        </div>
-        <div style="flex-direction: row">
-          <span>{{ job.place }} </span>
-          <span style="color: rgba(255, 255, 255, 0.192)">
-            // Industry: {{ job.industry }}</span
-          >
-        </div>
-        <span style="padding-bottom: 5px">{{ job.time }}</span>
-      </mat-expansion-panel-header>
-      <p *ngFor="let duty of job.children">- {{ duty.name }}</p>
-    </mat-expansion-panel>
-  </mat-accordion>
-</div>
+<h3>Work Experiance</h3>
+<mat-accordion>
+  <mat-expansion-panel
+    hideToggle
+    *ngFor="let job of this.experiances; let i = index"
+  >
+    <mat-expansion-panel-header>
+      <div class="header-main">
+        <mat-panel-title class="header-title">
+          {{ job.name }}
+        </mat-panel-title>
+        <mat-panel-description class="header-dates">
+          <span>{{ job.date }}</span>
+        </mat-panel-description>
+      </div>
+      <div class="place-industry">
+        <div class="place-title">{{ job.place }}</div>
+        <div class="header-industry">- {{ job.industry }}</div>
+      </div>
+      <span>{{ job.location }}</span>
+    </mat-expansion-panel-header>
+    <p class="job-descr text-b" *ngFor="let duty of job.children">
+      - {{ duty.name }}
+    </p>
+  </mat-expansion-panel>
+</mat-accordion>
