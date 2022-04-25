@@ -13,6 +13,7 @@ const EXP = [
       { name: 'Delivering changes to production using Bamboo CI/CD pipelines' },
       { name: 'Small Back-End related tasks in Java with REST API Endpoints' },
       { name: 'Participation in code review process' },
+      { name: 'Member of a Scrum team' },
     ],
   },
   {
@@ -25,6 +26,7 @@ const EXP = [
     children: [
       { name: 'Test Automation using Selenium Web driver and Cypress.io' },
       { name: 'Test planning for new features' },
+      { name: 'Member of a Scrum team' },
     ],
   },
   {
@@ -36,19 +38,25 @@ const EXP = [
     ref: 'https://www.tele2.lv/',
     children: [
       {
-        name: 'Use agile methodology on a daily basis within a team located in different geographic locations (Netherlands, Latvia and India).',
+        name: 'Perform Sanity tests on integrated Siebel CRM system',
       },
       {
-        name: 'Analyse requirements and develop Test Cases for new user stories.',
+        name: 'Use agile methodology on a daily basis within a team located in different geographic locations',
       },
       {
-        name: 'Work closely with developers and business analysts to achieve maximal test coverage of new functionality, by performing internal test case review sessions.',
+        name: 'Analyse requirements and develop Test Cases for new user stories',
       },
       {
-        name: 'Development of automation scripts in internal keyword based automation framework (developed on Java with Selenium Web driver), to automate regression test scenarios.',
+        name: 'Work closely with developers and business analysts to achieve maximal test coverage',
       },
       {
-        name: 'Perform performance and load tests on the billing system after each large release, record and report results to the Delivery Manager and Test group.',
+        name: 'Development of automation scripts in internal keyword based automation framework',
+      },
+      {
+        name: 'Use SQL on a daily basis to interact with Oracle DBS to prepare or modify test data',
+      },
+      {
+        name: 'Perform performance and load tests on the billing system after each large release',
       },
     ],
   },

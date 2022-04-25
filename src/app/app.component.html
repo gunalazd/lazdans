@@ -1,11 +1,17 @@
 <main>
   <div class="nav-container" id="nav-container">
-    <p class="nav-item" (click)="scrollToElement(intro)">INTRO</p>
     <p class="nav-item" (click)="scrollToElement(about)">ABOUT</p>
     <p class="nav-item" (click)="scrollToElement(work)">WORK</p>
+    <p class="nav-item" (click)="scrollToElement(portfolio)">PORTFOLIO</p>
     <p class="nav-item" (click)="scrollToElement(edd)">EDUCATION</p>
     <p class="nav-item" (click)="scrollToElement(contact)">CONTACT</p>
-    <button type="button" class="btn btn-warning btn-resume">Resume</button>
+    <a
+      href="/assets/CV_Gunars_Lazdans.docx.pdf"
+      class="btn btn-warning btn-resume"
+      target="_blank"
+    >
+      Resume
+    </a>
     <a
       href="https://www.linkedin.com/in/%E2%9A%A1-gunars-lazdans-%E2%9A%A1-346443155/"
       target="_blank"
@@ -21,14 +27,17 @@
   </div>
 
   <div class="wrapper">
-    <div class="content-container" #intro>
+    <div class="content-container" #about>
       <app-intro></app-intro>
     </div>
-    <div class="content-container" #about>
+    <div class="content-container">
       <app-about-me></app-about-me>
     </div>
     <div class="content-container" #work>
       <app-work-exp></app-work-exp>
+    </div>
+    <div class="content-container" #portfolio>
+      <app-projects></app-projects>
     </div>
     <div class="content-container" #edd>
       <app-education></app-education>
@@ -38,4 +47,9 @@
     </div>
   </div>
   <div class="to-top" id="to-top" (click)="toTop()"></div>
+
+  <footer>
+    Designed & built by
+    <span class="me" (click)="toTop()"> Gunars Lazdans</span>
+  </footer>
 </main>

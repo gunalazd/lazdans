@@ -22,6 +22,7 @@ import { MatTreeModule } from '@angular/material/tree';
 import { ExpandJobDirective } from './expand-job.directive';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { EducationComponent } from './education/education.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { EducationComponent } from './education/education.component';
     HoverMasterDirective,
     ExpandJobDirective,
     EducationComponent,
+    ProjectsComponent,
   ],
   imports: [
     BrowserModule,

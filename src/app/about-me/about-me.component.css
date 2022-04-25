@@ -5,3 +5,9 @@
   margin-top: 25px;
   margin-bottom: 25px;
 }
+
+.tech {
+  font-family: monospace;
+  font-weight: initial;
+  color: #fba92c;
+}

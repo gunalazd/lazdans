@@ -1,19 +1,21 @@
 <h3>Education, Courses and Certificates</h3>
 
 <div class="ed-main-wrapper">
-  <div class="ed-wrapper">
-    <div class="ed-item" *ngFor="let education of this.educations">
-      <div class="ed-item-name">{{ education.name }}</div>
-      <div class="ed-item-year">{{ education.year }} -</div>
-      <a class="ed-item-type" [attr.href]="education.ref" target="_blank">
-        {{ education.subtype }}
-      </a>
-    </div>
-  </div>
   <div class="pic-weapper">
     <div class="overlay"></div>
     <img src="assets/ed-2.png" alt="Education" />
   </div>
+  <div class="ed-wrapper">
+    <div class="ed-item" *ngFor="let education of this.educations">
+      <div class="ed-item-name text-b">{{ education.name }}</div>
+      <div class="ed-item-year text-b">{{ education.year }}</div>
+      <a
+        class="ed-item-type text-b"
+        [attr.href]="education.ref"
+        target="_blank"
+      >
+        {{ education.subtype }}
+      </a>
+    </div>
+  </div>
 </div>
-
-<!-- ADD IMAGE ON THE RIGHT SIDE TO ADJUST SPACE PROBLEMS -->

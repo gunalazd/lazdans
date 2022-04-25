@@ -1,0 +1,48 @@
+.proj-img.bets {
+  margin-left: 40px;
+  height: 300px;
+}
+
+.proj-wrapper-item {
+  display: flex;
+  flex-direction: row;
+}
+
+.proj-wrapper-item.project {
+  display: flex;
+  align-items: center;
+}
+
+.proj-img.bovada {
+  height: 300px;
+  margin-right: 40px;
+}
+
+.proj-img {
+  border-radius: 15px;
+  border: 5px solid #fba92c;
+}
+
+.proj-wrapper-item.project.b {
+  flex-direction: row;
+}
+
+.proj-wrapper {
+  padding: 25px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .proj-wrapper-item.project.b {
+    flex-direction: column-reverse;
+  }
+
+  .proj-wrapper-item.project.a {
+    flex-direction: column;
+  }
+
+  .proj-img.bets,
+  .proj-img.bovada {
+    margin: 25px;
+    /* height: 300px; */
+  }
+}

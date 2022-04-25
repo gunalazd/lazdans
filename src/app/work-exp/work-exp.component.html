@@ -14,7 +14,8 @@
         </mat-panel-description>
       </div>
       <div class="place-industry">
-        <div class="place-title">{{ job.place }}</div>
+        <a [href]="job.ref" target="_blank" class="place-title">
+          "{{ job.place }}"</a>
         <div class="header-industry">- {{ job.industry }}</div>
       </div>
       <span>{{ job.location }}</span>
