@@ -12,11 +12,21 @@ export class AppComponent implements OnInit {
   @ViewChild('myDiv') navbar: ElementRef | undefined;
 
   scrollToElement($element: HTMLDivElement): void {
+    this.closeBurger()
     console.log($element);
     $element.scrollIntoView({
       behavior: 'smooth',
       block: 'center',
     });
+  }
+
+  closeBurger() {
+    const burgerButton = document.getElementById(
+      'menu__toggle'
+    ) as HTMLInputElement;
+    if (burgerButton) {
+      burgerButton.checked = false;
+    }
   }
 
   ngOnInit(): void {
@@ -64,5 +74,5 @@ export class AppComponent implements OnInit {
     this.viewportScroller.scrollToPosition([0, 0]);
   }
 
-  title = 'lazdans';
+  title = 'Lazdans';
 }

@@ -6,7 +6,7 @@
     <p class="nav-item" (click)="scrollToElement(edd)">EDUCATION</p>
     <p class="nav-item" (click)="scrollToElement(contact)">CONTACT</p>
     <a
-      href="/assets/CV_Gunars_Lazdans.docx.pdf"
+      href="/assets/CV_Gunars_Lazdans.pdf"
       class="btn btn-warning btn-resume"
       target="_blank"
     >
@@ -24,6 +24,58 @@
         alt="Me"
       />
     </a>
+
+  </div>
+
+  <div class="hamburger-menu">
+    <div
+    class="hamburger-back"
+    style="
+    height: 60px;
+    width: 60px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    position: inherit;
+    right: 10px;
+    top: 10px;
+    ">
+
+    </div>
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+      <span></span>
+    </label>
+
+    <ul class="menu__box">
+      <li><a class="menu__item" (click)="scrollToElement(about)">ABOUT</a></li>
+      <li><a class="menu__item" (click)="scrollToElement(work)">WORK</a></li>
+      <li><a class="menu__item" (click)="scrollToElement(portfolio)">PORTFOLIO</a></li>
+      <li><a class="menu__item" (click)="scrollToElement(edd)">EDDUCATION</a></li>
+      <li><a class="menu__item" (click)="scrollToElement(contact)">CONTACT</a></li>
+      <li><a class="menu__item"
+        href="/assets/CV_Gunars_Lazdans.pdf"
+        target="_blank"
+        style="
+        background-color: #fba92c;
+        color: white;
+        "
+        >RESUME</a></li>
+    <a
+      href="https://www.linkedin.com/in/%E2%9A%A1-gunars-lazdans-%E2%9A%A1-346443155/"
+      target="_blank"
+    >
+      <img
+        src="assets/LI-Logo.png"
+        width="122"
+
+        style="    margin: 12px 0;
+        position: absolute;
+        right: 17px;"
+        alt="Me"
+      />
+    </a>
+
+    </ul>
   </div>
 
   <div class="wrapper">
