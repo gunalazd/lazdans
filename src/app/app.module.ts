@@ -23,6 +23,7 @@ import { ExpandJobDirective } from './expand-job.directive';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { EducationComponent } from './education/education.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { InViewportModule } from 'ng-in-viewport';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { ProjectsComponent } from './projects/projects.component';
     NgbModule,
     MatTreeModule,
     MatExpansionModule,
+    InViewportModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

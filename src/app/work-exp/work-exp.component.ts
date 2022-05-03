@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
+import { AppserviceService } from '../appservice.service';
 
 const EXP = [
   {
@@ -99,7 +100,11 @@ const EXP = [
   styleUrls: ['./work-exp.component.css'],
 })
 export class WorkExpComponent {
-  constructor() {}
+  constructor(private appService: AppserviceService) {}
+
+  addClass($event: any) {
+    this.appService.onIntersection($event);
+  }
 
   experiances = EXP;
   status: boolean = false;

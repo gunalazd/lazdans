@@ -3,11 +3,17 @@
 <div class="proj-wrapper">
   <div class="proj-wrapper-item project a">
     <img
+      inViewport
+      (inViewportAction)="this.addClass($event)"
       class="proj-img bovada"
       src="assets/bovada-site-view.png"
       alt="bovada"
     />
-    <div class="proj-cont">
+    <div
+      inViewport
+      (inViewportAction)="this.addClass($event)"
+      class="proj-cont"
+    >
       <div class="text text-b">
         My main Fronted related tasks was done on Sportsbook platform. At the
         time there was total of 5 different Sportsbook brand sites, each for a
@@ -19,7 +25,11 @@
     </div>
   </div>
   <div class="proj-wrapper-item project b">
-    <div class="proj-cont">
+    <div
+      inViewport
+      (inViewportAction)="this.addClass($event)"
+      class="proj-cont"
+    >
       <div class="text text-b">
         The vital part of the platform was the betslip - a place where players
         could place their bets. Lots of my work revolved around design
@@ -27,6 +37,12 @@
         part was adding CSS animations, I felt that it really improved the UX
       </div>
     </div>
-    <img class="proj-img bets" src="assets/bovada-betslip.png" alt="bovada" />
+    <img
+      inViewport
+      (inViewportAction)="this.addClass($event)"
+      class="proj-img bets"
+      src="assets/bovada-betslip.png"
+      alt="bovada"
+    />
   </div>
 </div>

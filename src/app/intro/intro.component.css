@@ -94,39 +94,3 @@
     opacity: 1;
   }
 }
-
-@-webkit-keyframes slideUpX {
-  0% {
-    -webkit-transform-origin: 0 0;
-    transform-origin: 0 0;
-    -webkit-transform: translateX(-20%);
-    transform: translateX(-20%);
-    opacity: 0;
-  }
-
-  100% {
-    -webkit-transform-origin: 0 0;
-    transform-origin: 0 0;
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
-
-@keyframes slideUpX {
-  0% {
-    -webkit-transform-origin: 0 0;
-    transform-origin: 0 0;
-    -webkit-transform: translateX(20%);
-    transform: translateX(20%);
-    opacity: 0;
-  }
-
-  100% {
-    -webkit-transform-origin: 0 0;
-    transform-origin: 0 0;
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}

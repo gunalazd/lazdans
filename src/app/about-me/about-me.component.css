@@ -11,3 +11,21 @@
   font-weight: initial;
   color: #fba92c;
 }
+
+.about_bulletpoints .text.inactive {
+  visibility: hidden;
+}
+
+.about_bulletpoints .text.active {
+  animation: 1s fadeIn ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}

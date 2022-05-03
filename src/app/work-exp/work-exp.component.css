@@ -105,3 +105,10 @@ mat-expansion-panel-header {
 .place-title:hover::before {
   transform: scaleX(1);
 }
+
+.active {
+  -webkit-animation-name: slideUpX;
+  animation-name: slideUpX;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}

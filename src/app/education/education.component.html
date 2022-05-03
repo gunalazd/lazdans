@@ -3,10 +3,21 @@
 <div class="ed-main-wrapper">
   <div class="pic-weapper">
     <div class="overlay"></div>
-    <img src="assets/ed-2.png" alt="Education" />
+    <img
+      class="imgEd"
+      inViewport
+      (inViewportAction)="this.addClass($event)"
+      src="assets/ed-2.png"
+      alt="Education"
+    />
   </div>
   <div class="ed-wrapper">
-    <div class="ed-item" *ngFor="let education of this.educations">
+    <div
+      inViewport
+      (inViewportAction)="this.addClass($event)"
+      class="ed-item"
+      *ngFor="let education of this.educations"
+    >
       <div class="ed-item-name text-b">{{ education.name }}</div>
       <div class="ed-item-year text-b">{{ education.year }}</div>
       <a

@@ -80,3 +80,17 @@ div.pic-weapper:hover div.overlay {
 .ed-item-type:hover::before {
   transform: scaleX(1);
 }
+
+.imgEd.active {
+  -webkit-animation-name: slideUpY;
+  animation-name: slideUpY;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.ed-item.active {
+  -webkit-animation-name: slideUpX;
+  animation-name: slideUpX;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}

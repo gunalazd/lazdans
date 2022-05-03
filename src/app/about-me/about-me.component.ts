@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppserviceService } from '../appservice.service';
 
 @Component({
   selector: 'app-about-me',
@@ -6,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-me.component.css'],
 })
 export class AboutMeComponent implements OnInit {
-  constructor() {}
+  constructor(private appService: AppserviceService) {}
+
+  addClass($event: any) {
+    this.appService.onIntersection($event);
+  }
 
   ngOnInit(): void {}
 }
