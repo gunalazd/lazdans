@@ -12,7 +12,7 @@ const ed = [
     name: 'Java 1 – Introduction to Java',
     subtype: 'JavaGuru Course',
     year: '2017',
-    ref: 'https://javaguru.lv/lv/',
+    ref: 'https://javaguru.lv/en/',
   },
   {
     name: 'ISTQB® Certified Tester Foundation Level certification',

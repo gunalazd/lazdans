@@ -86,3 +86,25 @@ body {
   width: fit-content;
   padding: 0 6px;
 }
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #fba92c #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #494949;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #fba92c;
+  border-radius: 12px;
+  border: 2px solid #494949;
+}

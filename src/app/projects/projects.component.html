@@ -6,8 +6,9 @@
       inViewport
       (inViewportAction)="this.addClass($event)"
       class="proj-img bovada"
-      src="assets/bovada-site-view.png"
+      src="assets/laptop.png"
       alt="bovada"
+      (click)="onImagePreview('bovada')"
     />
     <div
       inViewport
@@ -15,12 +16,12 @@
       class="proj-cont"
     >
       <div class="text text-b">
-        My main Fronted related tasks was done on Sportsbook platform. At the
-        time there was total of 5 different Sportsbook brand sites, each for a
-        different region and with it's own design nuances, color palattes, and
-        variations. The challenging part of this was the fact that all of these
-        sites had to build from the same code, taking into consideration desktop
-        and mobile views.
+        At "The Workshop - Inventors of Play" my main Fronted related tasks was
+        done on Sportsbook platform. At the time there was total of 5 different
+        Sportsbook brand sites, each for a different region and with it's own
+        design nuances, color palattes, and variations. The challenging part of
+        this was the fact that all of these sites had to build from the same
+        code, taking into consideration desktop and mobile views.
       </div>
     </div>
   </div>
@@ -41,8 +42,19 @@
       inViewport
       (inViewportAction)="this.addClass($event)"
       class="proj-img bets"
-      src="assets/bovada-betslip.png"
+      src="assets/betslip.png"
       alt="bovada"
+      (click)="onImagePreview('betslip')"
     />
   </div>
+</div>
+
+<div
+  class="image-preview"
+  *ngIf="showBovada || showBetslip"
+  (click)="onImagePreview('close')"
+>
+  <img *ngIf="showBovada" src="assets/bovada-site-view.png" alt="bovada" />
+
+  <img *ngIf="showBetslip" src="assets/bovada-betslip.png" alt="bovada" />
 </div>

@@ -19,11 +19,11 @@
 }
 
 .proj-img {
-  border-radius: 15px;
-  border: 3px solid #fba92c;
+  cursor: pointer;
 }
 
 .proj-wrapper-item.project.b {
+  margin-top: 50px;
   flex-direction: row;
 }
 
@@ -44,6 +44,21 @@
   .proj-img.bovada {
     margin: 25px;
     /* height: 300px; */
+  }
+
+  .proj-wrapper-item.project.b {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .proj-img.bovada {
+    height: auto;
+    width: -webkit-fill-available;
+  }
+
+  .proj-wrapper-item.project.b {
+    margin-top: 0;
   }
 }
 
@@ -152,4 +167,24 @@
     transform: translateX(0%);
     opacity: 1;
   }
+}
+
+.image-preview {
+  right: 0;
+  top: 0;
+  background-color: rgba(73, 73, 73, 0.85);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  z-index: 999;
+  bottom: 0;
+  padding: 15px;
+  left: 0;
+  cursor: pointer;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 100vh;
+  margin: auto;
 }
