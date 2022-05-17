@@ -12,8 +12,7 @@ export class AppComponent implements OnInit {
   @ViewChild('myDiv') navbar: ElementRef | undefined;
 
   scrollToElement($element: HTMLDivElement): void {
-    this.closeBurger()
-    console.log($element);
+    this.closeBurger();
     $element.scrollIntoView({
       behavior: 'smooth',
       block: 'center',

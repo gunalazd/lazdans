@@ -19,7 +19,9 @@ export class AppserviceService {
     target: Element;
     visible: boolean;
   }): void {
-    this.renderer.addClass(target, visible ? 'active' : 'inactive');
-    this.renderer.removeClass(target, visible ? 'inactive' : '');
+    if (visible) {
+      this.renderer.addClass(target, visible ? 'active' : 'inactive');
+      this.renderer.removeClass(target, visible ? 'inactive' : '');
+    }
   }
 }

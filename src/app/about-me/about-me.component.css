@@ -10,6 +10,12 @@
   font-family: monospace;
   font-weight: initial;
   color: #fba92c;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tech .skill {
+  margin-right: 15px;
 }
 
 .about_bulletpoints .text.inactive {
