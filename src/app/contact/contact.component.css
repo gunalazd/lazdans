@@ -1,10 +1,52 @@
 .contact {
-  text-align: center;
-  padding: 25px;
 }
 
-.contact-me{
+.contact.active {
+  padding: 25px;
+  -webkit-animation-name: slideUpZ;
+  animation-name: slideUpZ;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+.contact-me {
   padding: 0;
   color: #fba92c;
   text-decoration: none;
+}
+
+@-webkit-keyframes slideUpZ {
+  0% {
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: translateY(-35%);
+    transform: translateY(-35%);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUpZ {
+  0% {
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: translateY(35%);
+    transform: translateY(35%);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }

@@ -71,7 +71,7 @@ span.mat-content {
 html,
 body {
   height: max-content;
-  overflow-x: auto;
+  overflow-x: clip;
 }
 
 .text {
@@ -82,7 +82,7 @@ body {
 }
 
 .text-b {
-  background-color: #494949;
+  /* background-color: #494949; */
   width: fit-content;
   padding: 0 6px;
 }

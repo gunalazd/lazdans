@@ -45,13 +45,13 @@ div.pic-weapper:hover div.overlay {
 
 .ed-item-name {
   font-size: 20px;
-  background-color: #494949;
+  /* background-color: #494949; */
   width: fit-content;
 }
 
 .ed-item-year {
   display: inline;
-  background-color: #494949;
+  /* background-color: #494949; */
   width: fit-content;
 }
 
@@ -60,7 +60,7 @@ div.pic-weapper:hover div.overlay {
   color: #fba92c;
   text-decoration: none;
   display: inline;
-  background-color: #494949;
+  /* background-color: #494949; */
   width: fit-content;
 }
 

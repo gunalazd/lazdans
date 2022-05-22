@@ -33,7 +33,8 @@ mat-expansion-panel .mat-expanded {
 mat-expansion-panel-header {
   padding-bottom: 5px;
   margin-top: 10px;
-  border: #504f4f 2px solid;
+  border: #fba92c38 1px solid;
+  border-radius: 15px;
   background-color: #494949b2;
   transition: background-color 0.5s ease-in;
 }
@@ -43,18 +44,21 @@ mat-expansion-panel-header {
   background-color: #fba92c;
   color: white;
   /* border: #fba92c 2px solid; */
-  border-radius: 5px;
+
+  /* border: #fba92c 2px solid; */
+  /* border-radius: 5px; */
 }
 
 .mat-expansion-panel-header.mat-expanded:hover {
   transition: background-color 0.2s ease-in, color 0.2s ease-in;
-  background-color: #fba92c;
+  /* background-color: #fba92c; */
   color: #ffffff;
-  border-radius: 5px;
+  /* border: #fba92c 1px solid; */
+  /* border-radius: 5px; */
 }
 
 .mat-expansion-panel-header.mat-expanded {
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 
 .job-descr {
