@@ -8,8 +8,8 @@
   width: 300px;
   height: 300px;
   border-radius: 150px;
-  border: 3px solid #fba92c;
-  background-color: #fba92c;
+  border: 3px solid #ffc107;
+  background-color: #ffc107;
 }
 
 .overlay {
@@ -57,7 +57,7 @@ div.pic-weapper:hover div.overlay {
 
 .ed-item-type {
   position: relative;
-  color: #fba92c;
+  color: #ffc107;
   text-decoration: none;
   display: inline;
   /* background-color: #494949; */
@@ -81,11 +81,17 @@ div.pic-weapper:hover div.overlay {
   transform: scaleX(1);
 }
 
+.imgEd,
+.ed-item {
+  visibility: hidden;
+}
+
 .imgEd.active {
   -webkit-animation-name: slideUpY;
   animation-name: slideUpY;
   animation-duration: 1s;
   animation-timing-function: ease-out;
+  visibility: visible;
 }
 
 .ed-item.active {
@@ -93,4 +99,5 @@ div.pic-weapper:hover div.overlay {
   animation-name: slideUpX;
   animation-duration: 1s;
   animation-timing-function: ease-out;
+  visibility: visible;
 }

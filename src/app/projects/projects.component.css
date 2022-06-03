@@ -18,8 +18,13 @@
   margin-right: 40px;
 }
 
+.proj-img.bets,
+.proj-img.bovada {
+  visibility: hidden;
+}
+
 .proj-img {
-  cursor: pointer;
+  cursor: zoom-in;
 }
 
 .proj-wrapper-item.project.b {
@@ -62,15 +67,13 @@
   }
 }
 
-.proj-cont.inactive {
+.proj-cont {
   visibility: hidden;
 }
 
 .proj-cont.active {
-  /* visibility: hidden; */
   animation: 1s fadeIn ease-in-out;
-
-  /* visibility: visible; */
+  visibility: visible;
 }
 
 @keyframes fadeIn {
@@ -88,6 +91,7 @@
   animation-name: slideUpX;
   animation-duration: 1s;
   animation-timing-function: ease-out;
+  visibility: visible;
 }
 
 .proj-img.bovada.active {
@@ -95,6 +99,7 @@
   animation-name: slideUpY;
   animation-duration: 1s;
   animation-timing-function: ease-out;
+  visibility: visible;
 }
 
 @-webkit-keyframes slideUpX {
@@ -172,7 +177,7 @@
 .image-preview {
   right: 0;
   top: 0;
-  background-color: rgba(73, 73, 73, 0.85);
+  background-color: #0e698fb0;
   position: fixed;
   display: flex;
   justify-content: center;

@@ -1,7 +1,9 @@
 .contact {
+  visibility: hidden;
 }
 
 .contact.active {
+  visibility: visible;
   padding: 25px;
   -webkit-animation-name: slideUpZ;
   animation-name: slideUpZ;
@@ -11,7 +13,7 @@
 
 .contact-me {
   padding: 0;
-  color: #fba92c;
+  color: #ffc107;
   text-decoration: none;
 }
 

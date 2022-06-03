@@ -5,13 +5,13 @@
 .tech {
   font-family: monospace;
   font-weight: initial;
-  color: #fba92c;
+  color: #ffc107;
   display: flex;
   flex-wrap: wrap;
 }
 
 .tech .skill {
-  margin-right: 15px;
+  padding: 7px;
 }
 
 .about_bulletpoints .text.inactive {
@@ -29,5 +29,31 @@
   100% {
     visibility: visible;
     opacity: 1;
+  }
+}
+
+.skill:hover {
+  color: white;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  animation: gradient 3s ease infinite;
+  /* cursor: pointer; */
+  background-size: 400% 400%;
+  /* height: 100vh; */
+}
+
+.blob {
+  position: absolute;
+  z-index: -1;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }

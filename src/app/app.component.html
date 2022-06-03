@@ -1,4 +1,55 @@
 <main>
+  <div class="header">
+    <!--Content before waves-->
+    <div class="wrapper">
+      <div class="content-container" #about>
+        <app-intro></app-intro>
+      </div>
+    </div>
+
+    <!--Waves Container-->
+    <div>
+      <svg
+        class="waves"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28"
+        preserveAspectRatio="none"
+        shape-rendering="auto"
+      >
+        <defs>
+          <path
+            id="gentle-wave"
+            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+          />
+        </defs>
+        <g class="parallax">
+          <use
+            xlink:href="#gentle-wave"
+            x="48"
+            y="0"
+            fill="rgba(255,255,255,0.7"
+          />
+          <use
+            xlink:href="#gentle-wave"
+            x="48"
+            y="3"
+            fill="rgba(255,255,255,0.5)"
+          />
+          <use
+            xlink:href="#gentle-wave"
+            x="48"
+            y="5"
+            fill="rgba(255,255,255,0.3)"
+          />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="#3565bb" />
+        </g>
+      </svg>
+    </div>
+    <!--Waves end-->
+  </div>
+  <!--Header ends-->
+
   <div class="nav-container" id="nav-container">
     <p class="nav-item" (click)="scrollToElement(about)">ABOUT</p>
     <p class="nav-item" (click)="scrollToElement(work)">WORK</p>
@@ -24,23 +75,21 @@
         alt="Me"
       />
     </a>
-
   </div>
 
   <div class="hamburger-menu">
     <div
-    class="hamburger-back"
-    style="
-    height: 60px;
-    width: 60px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 30px;
-    position: inherit;
-    right: 10px;
-    top: 10px;
-    ">
-
-    </div>
+      class="hamburger-back"
+      style="
+        height: 60px;
+        width: 60px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 30px;
+        position: inherit;
+        right: 10px;
+        top: 10px;
+      "
+    ></div>
     <input id="menu__toggle" type="checkbox" />
     <label class="menu__btn" for="menu__toggle">
       <span></span>
@@ -49,52 +98,76 @@
     <ul class="menu__box">
       <li><a class="menu__item" (click)="scrollToElement(about)">ABOUT</a></li>
       <li><a class="menu__item" (click)="scrollToElement(work)">WORK</a></li>
-      <li><a class="menu__item" (click)="scrollToElement(portfolio)">PORTFOLIO</a></li>
-      <li><a class="menu__item" (click)="scrollToElement(edd)">EDDUCATION</a></li>
-      <li><a class="menu__item" (click)="scrollToElement(contact)">CONTACT</a></li>
-      <li><a class="menu__item"
-        href="/assets/CV_Gunars_Lazdans.pdf"
+      <li>
+        <a class="menu__item" (click)="scrollToElement(portfolio)">PORTFOLIO</a>
+      </li>
+      <li>
+        <a class="menu__item" (click)="scrollToElement(edd)">EDDUCATION</a>
+      </li>
+      <li>
+        <a class="menu__item" (click)="scrollToElement(contact)">CONTACT</a>
+      </li>
+      <li>
+        <a
+          class="menu__item"
+          href="/assets/CV_Gunars_Lazdans.pdf"
+          target="_blank"
+          style="background-color: #ffc107; color: white"
+          >RESUME</a
+        >
+      </li>
+      <a
+        href="https://www.linkedin.com/in/%E2%9A%A1-gunars-lazdans-%E2%9A%A1-346443155/"
         target="_blank"
-        style="
-        background-color: #fba92c;
-        color: white;
-        "
-        >RESUME</a></li>
-    <a
-      href="https://www.linkedin.com/in/%E2%9A%A1-gunars-lazdans-%E2%9A%A1-346443155/"
-      target="_blank"
-    >
-      <img
-        src="assets/LI-Logo.png"
-        width="122"
-
-        style="    margin: 12px 0;
-        position: absolute;
-        right: 17px;"
-        alt="Me"
-      />
-    </a>
-
+      >
+        <img
+          src="assets/LI-Logo.png"
+          width="122"
+          style="margin: 12px 0; position: absolute; right: 17px"
+          alt="Me"
+        />
+      </a>
     </ul>
   </div>
 
   <div class="wrapper">
-    <div class="content-container" #about>
-      <app-intro></app-intro>
-    </div>
-    <div class="content-container">
+    <div
+      class="content-container"
+      inViewport
+      (inViewportAction)="this.addClass($event)"
+    >
       <app-about-me></app-about-me>
     </div>
-    <div class="content-container" #work>
+    <div
+      class="content-container"
+      inViewport
+      (inViewportAction)="this.addClass($event)"
+      #work
+    >
       <app-work-exp></app-work-exp>
     </div>
-    <div class="content-container" #portfolio>
+    <div
+      class="content-container"
+      inViewport
+      (inViewportAction)="this.addClass($event)"
+      #portfolio
+    >
       <app-projects></app-projects>
     </div>
-    <div class="content-container" #edd>
+    <div
+      class="content-container"
+      inViewport
+      (inViewportAction)="this.addClass($event)"
+      #edd
+    >
       <app-education></app-education>
     </div>
-    <div class="content-container" #contact>
+    <div
+      class="content-container"
+      inViewport
+      (inViewportAction)="this.addClass($event)"
+      #contact
+    >
       <app-contact></app-contact>
     </div>
   </div>

@@ -2,15 +2,13 @@ main {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #494949;
   opacity: 1;
-  background-image: radial-gradient(#5e5e5e 1px, transparent 1px),
-    radial-gradient(#5e5e5e 1px, #494949 1px);
   background-size: 40px 40px;
   background-position: 0 0, 20px 20px;
 
   font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
     system-ui, sans-serif;
+  background-color: #3565bb;
 }
 
 .nav-container {
@@ -22,7 +20,6 @@ main {
   align-items: center;
   padding-right: 10px;
   padding-left: 10px;
-  /* background-color: rgba(86, 86, 86, 0.85); */
   height: 70px;
   transition: top 0.15s ease-out;
   z-index: 99;
@@ -34,13 +31,31 @@ main {
   flex-direction: column;
   flex: 1;
   align-items: center;
-  /* background-color: rgb(0, 0, 0); */
   margin-left: 10px;
   margin-right: 10px;
   row-gap: 10px;
-  margin-top: 50px;
-  /* display: flex;
-  gap: 50px; */
+}
+
+.wrapper:nth-child(2n + 2) .content-container {
+  visibility: hidden;
+  background: linear-gradient(
+    60deg,
+    rgba(84, 58, 183, 1) 0%,
+    rgba(0, 172, 193, 1) 100%
+  );
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+.wrapper:nth-child(2n + 2) .content-container.active {
+  visibility: visible;
+  -webkit-animation: slide-in-elliptic-top-fwd 0.7s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
 }
 
 @media only screen and (min-width: 600px) {
@@ -51,7 +66,6 @@ main {
   .wrapper {
     margin-left: 50px;
     margin-right: 50px;
-    /* gap: 0; */
   }
 }
 
@@ -82,7 +96,7 @@ main {
 }
 
 .nav-item:hover {
-  color: #fba92c;
+  color: #ffc107;
 }
 
 [id]::before {
@@ -129,12 +143,15 @@ main {
 footer {
   text-align: center;
   color: white;
-  margin-top: 50px;
-  background-color: #2e2e2e;
+  background: linear-gradient(
+    60deg,
+    rgba(84, 58, 183, 1) 0%,
+    rgba(0, 172, 193, 1) 100%
+  );
 }
 
 footer .me {
-  color: #fba92c;
+  color: #ffc107;
   font-weight: 500;
   cursor: pointer;
 }
@@ -186,7 +203,7 @@ footer .me {
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: #fba92c;
+  background-color: #ffc107;
   transition-duration: 0.25s;
   z-index: 100;
 }
@@ -226,4 +243,88 @@ footer .me {
 }
 .menu__item:hover {
   background-color: #cfd8dc;
+}
+
+h1 {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: 48px;
+}
+p {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1px;
+  font-size: 14px;
+  color: #333333;
+}
+
+.header {
+  position: relative;
+  text-align: center;
+  background: linear-gradient(
+    60deg,
+    rgba(84, 58, 183, 1) 0%,
+    rgba(0, 172, 193, 1) 100%
+  );
+  color: white;
+}
+
+.inner-header {
+  height: 65vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px; /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.content {
+  position: relative;
+  height: 20vh;
+  text-align: center;
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
 }

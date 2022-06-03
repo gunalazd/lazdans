@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { DOCUMENT, ViewportScroller } from '@angular/common';
+import { AppserviceService } from './appservice.service';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,14 @@ import { DOCUMENT, ViewportScroller } from '@angular/common';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  constructor(private viewportScroller: ViewportScroller) {}
+  constructor(
+    private viewportScroller: ViewportScroller,
+    private appService: AppserviceService
+  ) {}
+
+  addClass($event: any) {
+    this.appService.onIntersection($event);
+  }
 
   @ViewChild('myDiv') navbar: ElementRef | undefined;
 
@@ -62,7 +70,7 @@ export class AppComponent implements OnInit {
         }
       } else {
         if (element) {
-          element.style.backgroundColor = 'rgba(73, 73, 73, 0.85)';
+          element.style.backgroundColor = '#099fc0c9';
         }
       }
       prevScrollpos = currentScrollPos;
