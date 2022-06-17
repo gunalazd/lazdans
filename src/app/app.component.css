@@ -3,12 +3,13 @@ main {
   flex-direction: column;
   min-height: 100vh;
   opacity: 1;
-  background-size: 40px 40px;
+  /* background-size: 40px 40px; */
   background-position: 0 0, 20px 20px;
 
   font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
     system-ui, sans-serif;
-  background-color: #3565bb;
+  /* background-color: #3565bb; */
+  background-image: linear-gradient(#396ac3, #4e40b7);
 }
 
 .nav-container {
@@ -53,9 +54,8 @@ main {
 .wrapper:nth-child(2n + 2) .content-container.active {
   visibility: visible;
   -webkit-animation: slide-in-elliptic-top-fwd 0.7s
-    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-    both;
+    cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 @media only screen and (min-width: 600px) {
@@ -128,6 +128,10 @@ main {
   border-radius: 30px;
   transition: all 0.2s ease-in-out;
   background-image: url(./assets/upper-27.svg);
+}
+
+.to-top:hover {
+  background-color: rgba(255, 255, 255, 0.171);
 }
 
 .show-scrollTop {

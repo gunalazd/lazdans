@@ -6,28 +6,31 @@ const EXP = [
     name: 'Software Engineer',
     place: 'The Workshop - Inventors of Play',
     industry: 'Online Gambling',
-    date: '[Sep 2020 – Nov 2021]',
+    date: '[Jan 2020 – Dec 2021]',
     location: 'Spain',
     ref: 'https://theworkshop.com/',
     children: [
-      { name: 'Front-End development with Angular and Typescript' },
+      { name: 'Work in an environment with complex software architecture' },
+      {
+        name: 'Front-End development with Angular and Typescript, tested with Jasmine, Karma and Cypress',
+      },
       { name: 'Delivering changes to production using Bamboo CI/CD pipelines' },
-      { name: 'Small Back-End related tasks in Java with REST API Endpoints' },
-      { name: 'Participation in code review process' },
-      { name: 'Member of a Scrum team' },
+      {
+        name: 'Some Back-End tasks in Java with REST API Endpoint implementation',
+      },
+      { name: 'Participation in the code review process' },
     ],
   },
   {
     name: 'QA Engineer',
     place: 'The Workshop - Inventors of Play',
     industry: 'Online Gambling',
-    date: '[Jun 2018 – Sep 2020]',
+    date: '[Jun 2018 – Jan 2020]',
     location: 'Spain',
     ref: 'https://theworkshop.com/',
     children: [
       { name: 'Test Automation using Selenium Web driver and Cypress.io' },
       { name: 'Test planning for new features' },
-      { name: 'Member of a Scrum team' },
     ],
   },
   {
