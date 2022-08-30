@@ -11,6 +11,7 @@ export class ProjectsComponent implements OnInit {
 
   showBovada: boolean = false;
   showBetslip: boolean = false;
+  showWeather: boolean = false;
 
   addClass($event: any) {
     this.appService.onIntersection($event);
@@ -22,12 +23,21 @@ export class ProjectsComponent implements OnInit {
     if (img === 'bovada') {
       this.showBovada = true;
       this.showBetslip = false;
-    } else if (img === 'betslip') {
+      this.showWeather = false;
+    }
+    if (img === 'betslip') {
       this.showBovada = false;
       this.showBetslip = true;
-    } else {
+      this.showWeather = false;
+    }
+    if (img === 'weather') {
       this.showBovada = false;
       this.showBetslip = false;
+      this.showWeather = true;
+    } else if (img === 'close') {
+      this.showBovada = false;
+      this.showBetslip = false;
+      this.showWeather = false;
     }
   }
 }

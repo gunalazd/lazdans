@@ -20,6 +20,12 @@
   flex: 1 0 auto;
 }
 
+.frontend {
+  /* padding: 0; */
+  color: #ffc107;
+  text-decoration: none;
+}
+
 .prof img {
   width: 300px;
   height: 300px;
@@ -54,9 +60,9 @@
   }
 }
 
-.text-b {
+/* .text-b {
   padding: 0;
-}
+} */
 
 .long {
   font-size: 19px;

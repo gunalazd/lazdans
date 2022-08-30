@@ -13,35 +13,28 @@ body {
 
 h3 {
   font-size: 40px;
-  display: flex;
-  /* color: #ffc107; */
-  padding: 15px;
-  text-align: center;
+  padding: 0 60px;
   font-family: monospace;
-  align-items: center;
-  justify-content: center;
+  isolation: isolate;
 }
 
 h3::after {
   content: "";
   display: block;
   position: relative;
-  width: 5ch;
-  height: 4px;
-  margin-left: 20px;
+  width: 15ch;
+  top: -24px;
+  height: 26px;
+  margin-left: -8px;
   border-radius: 2px;
-  background: linear-gradient(90deg, #ffffff, rgba(255, 255, 255, 0));
+  background: rgba(84, 58, 183, 1);
+  z-index: -1;
 }
 
-h3::before {
-  content: "";
-  display: block;
-  position: relative;
-  width: 5ch;
-  height: 4px;
-  margin-right: 20px;
-  border-radius: 2px;
-  background: linear-gradient(-90deg, #ffffff, rgba(255, 255, 255, 0));
+@media only screen and (max-width: 700px) {
+  h3::after {
+    width: 10ch;
+  }
 }
 
 .content-container {

@@ -47,14 +47,42 @@
       (click)="onImagePreview('betslip')"
     />
   </div>
+  <div class="proj-wrapper-item project a">
+    <img
+      inViewport
+      (inViewportAction)="this.addClass($event)"
+      class="proj-img bovada"
+      src="assets/weather-d.png"
+      alt="weather"
+      (click)="onImagePreview('weather')"
+    />
+    <div
+      inViewport
+      (inViewportAction)="this.addClass($event)"
+      class="proj-cont"
+    >
+      <div class="text text-b">
+        For a personal project, I made a
+        <a href="https://weather.lazdans.com/" target="_blank">weather app</a>
+        in Angular to play around with calls to 3rd party API endpoints to
+        retreive information on the weather conditions in selected city, either
+        for current weather or temperature forecast for next 5 days (to display
+        forecast as a chart I was using Chart.js open-source JavaScript
+        library). As source of the weather data I was using openweathermap.org
+        API
+      </div>
+    </div>
+  </div>
 </div>
 
 <div
   class="image-preview"
-  *ngIf="showBovada || showBetslip"
+  *ngIf="showBovada || showBetslip || showWeather"
   (click)="onImagePreview('close')"
 >
-  <img *ngIf="showBovada" src="assets/bovada-site-view.png" alt="bovada" />
+  <img *ngIf="showBovada" src="assets/bovada-site-view.png" alt="" />
 
-  <img *ngIf="showBetslip" src="assets/bovada-betslip.png" alt="bovada" />
+  <img *ngIf="showBetslip" src="assets/bovada-betslip.png" alt="" />
+
+  <img *ngIf="showWeather" src="assets/weather.png" alt="" />
 </div>

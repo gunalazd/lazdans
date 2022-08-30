@@ -38,17 +38,20 @@ main {
 }
 
 .wrapper:nth-child(2n + 2) .content-container {
+  /* box-shadow: none; */
   visibility: hidden;
-  background: linear-gradient(
+  /* background: linear-gradient(
     60deg,
     rgba(84, 58, 183, 1) 0%,
     rgba(0, 172, 193, 1) 100%
-  );
+  ); */
   border-radius: 15px;
   padding: 15px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
     rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
     rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  transition: box-shadow 3.5s;
+  transition-delay: 550ms;
 }
 
 .wrapper:nth-child(2n + 2) .content-container.active {
@@ -56,6 +59,9 @@ main {
   -webkit-animation: slide-in-elliptic-top-fwd 0.7s
     cubic-bezier(0.25, 0.46, 0.45, 0.94);
   animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: none;
+  transition: box-shadow 3.5s;
+  transition-delay: 550ms;
 }
 
 @media only screen and (min-width: 600px) {

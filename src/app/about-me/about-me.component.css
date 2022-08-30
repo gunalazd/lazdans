@@ -8,6 +8,7 @@
   color: #ffc107;
   display: flex;
   flex-wrap: wrap;
+  cursor: url("/assets/cursor.cur"), auto;
 }
 
 .tech .skill {

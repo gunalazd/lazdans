@@ -6,7 +6,7 @@ const EXP = [
     name: 'Software Engineer',
     place: 'The Workshop - Inventors of Play',
     industry: 'Online Gambling',
-    date: '[Jan 2020 – Dec 2021]',
+    date: '[Jan 2020 – Nov 2021]',
     location: 'Spain',
     ref: 'https://theworkshop.com/',
     children: [

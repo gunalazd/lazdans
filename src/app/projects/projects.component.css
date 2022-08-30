@@ -36,6 +36,10 @@
   padding: 25px;
 }
 
+.text.text-b a {
+  color: #ffc107;
+}
+
 @media only screen and (max-width: 1000px) {
   .proj-wrapper-item.project.b {
     flex-direction: column-reverse;
