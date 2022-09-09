@@ -3,7 +3,7 @@ import { AppserviceService } from '../appservice.service';
 
 const EXP = [
   {
-    name: 'Software Engineer',
+    name: 'Frontend Engineer',
     place: 'The Workshop - Inventors of Play',
     industry: 'Online Gambling',
     date: '[Jan 2020 – Nov 2021]',
