@@ -34,6 +34,32 @@ mat-expansion-panel .mat-expanded {
   font-weight: 500;
 }
 
+.mat-expansion-panel-header.mat-expanded::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 57px;
+  background-color: #31499b;
+  -webkit-animation: slide-in-bck-right 0.8s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-bck-right 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  right: 0;
+}
+
+.mat-expansion-panel-header.mat-expanded::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 57px;
+  background-color: #31499b;
+  -webkit-animation: slide-in-bck-left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: slide-in-bck-left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  left: 0;
+}
+
 mat-expansion-panel-header {
   padding-bottom: 5px;
   margin-top: 10px;

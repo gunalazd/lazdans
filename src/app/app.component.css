@@ -133,7 +133,7 @@ main {
   height: 60px;
   border-radius: 30px;
   transition: all 0.2s ease-in-out;
-  background-image: url(./assets/upper-27.svg);
+  background-image: url(../assets/upper-27.svg);
 }
 
 .to-top:hover {
