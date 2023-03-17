@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AppserviceService } from '../appservice.service';
+import { AppService } from '../appservice.service';
 
 @Component({
   selector: 'app-projects',
@@ -7,7 +7,7 @@ import { AppserviceService } from '../appservice.service';
   styleUrls: ['./projects.component.css'],
 })
 export class ProjectsComponent implements OnInit {
-  constructor(private appService: AppserviceService) {}
+  constructor(private appService: AppService) {}
 
   showBovada: boolean = false;
   showBetslip: boolean = false;

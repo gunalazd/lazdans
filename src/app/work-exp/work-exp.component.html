@@ -4,7 +4,7 @@
     inViewport
     (inViewportAction)="this.addClass($event)"
     hideToggle
-    *ngFor="let job of this.experiances; let i = index"
+    *ngFor="let job of this.experiences; let i = index"
   >
     <mat-expansion-panel-header>
       <div class="header-main">
@@ -23,8 +23,8 @@
       </div>
       <span>{{ job.location }}</span>
     </mat-expansion-panel-header>
-    <p class="job-descr text-b" *ngFor="let duty of job.children">
-      - {{ duty.name }}
+    <p class="job-descr text-b" *ngFor="let duty of job.duties">
+      {{ duty }}
     </p>
   </mat-expansion-panel>
 </mat-accordion>

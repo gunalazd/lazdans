@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AppserviceService } from '../appservice.service';
+import { AppService } from '../appservice.service';
 
 const ed = [
   {
@@ -34,7 +34,7 @@ const ed = [
   styleUrls: ['./education.component.css'],
 })
 export class EducationComponent implements OnInit {
-  constructor(private appService: AppserviceService) {}
+  constructor(private appService: AppService) {}
 
   addClass($event: any) {
     this.appService.onIntersection($event);

@@ -24,6 +24,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { EducationComponent } from './education/education.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { InViewportModule } from 'ng-in-viewport';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { InViewportModule } from 'ng-in-viewport';
     MatTreeModule,
     MatExpansionModule,
     InViewportModule,
+    DragDropModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

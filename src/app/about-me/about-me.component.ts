@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AppserviceService } from '../appservice.service';
+import { AppService } from '../appservice.service';
 
 @Component({
   selector: 'app-about-me',
@@ -7,7 +7,7 @@ import { AppserviceService } from '../appservice.service';
   styleUrls: ['./about-me.component.css'],
 })
 export class AboutMeComponent implements OnInit {
-  constructor(private appService: AppserviceService) {}
+  constructor(private appService: AppService) {}
 
   addClass($event: any) {
     this.appService.onIntersection($event);

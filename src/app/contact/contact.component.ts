@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AppserviceService } from '../appservice.service';
+import { AppService } from '../appservice.service';
 
 @Component({
   selector: 'app-contact',
@@ -7,7 +7,7 @@ import { AppserviceService } from '../appservice.service';
   styleUrls: ['./contact.component.css'],
 })
 export class ContactComponent implements OnInit {
-  constructor(private appService: AppserviceService) {}
+  constructor(private appService: AppService) {}
 
   ngOnInit(): void {}
 

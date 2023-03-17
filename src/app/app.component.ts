@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { DOCUMENT, ViewportScroller } from '@angular/common';
-import { AppserviceService } from './appservice.service';
+import { AppService } from './appservice.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ import { AppserviceService } from './appservice.service';
 export class AppComponent implements OnInit {
   constructor(
     private viewportScroller: ViewportScroller,
-    private appService: AppserviceService
+    private appService: AppService
   ) {}
 
   addClass($event: any) {
